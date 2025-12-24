@@ -53,7 +53,10 @@ export const buildPreviewGltf = async ({
   // Derive output filename from the source path
   const sourcePath = previewBuild.sourcePath
   const sourceBasename = path.basename(sourcePath)
-  const gltfFilename = sourceBasename.replace(/\.(board|circuit)?\.tsx?$/, ".gltf")
+  const gltfFilename = sourceBasename.replace(
+    /\.(board|circuit)?\.tsx?$/,
+    ".gltf",
+  )
   const outputPath = path.join(distDir, gltfFilename)
 
   try {
